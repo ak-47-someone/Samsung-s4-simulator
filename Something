@@ -333,6 +333,18 @@ boot.style.display="none"
 }
 
 </script>
-
+<audio id="bootSound" src="https://www.myinstants.com/media/sounds/samsung-galaxy-s4-startup.mp3"></audio>
+document.body.addEventListener("click", () => {
+    document.getElementById("bootSound").play();
+});
+<script>
+window.addEventListener("load", function() {
+    const sound = document.getElementById("bootSound");
+    sound.volume = 1;
+    sound.play().catch(() => {
+        console.log("Autoplay blocked until tap");
+    });
+});
+</script>
 </body>
 </html>
