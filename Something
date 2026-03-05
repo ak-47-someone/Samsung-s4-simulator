@@ -346,5 +346,8 @@ window.addEventListener("load", function() {
     });
 });
 </script>
+document.body.addEventListener("click", () => {
+    document.getElementById("bootSound").play();
+});
 </body>
 </html>
